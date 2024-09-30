@@ -1,0 +1,11 @@
+{
+  "name": "project-dom-course",
+  "version": "1.0.0",
+  "description": "The project is based on creating a Task Manager, where tasks can be added to a list in a single column through a simple button (Add Task) depending on what is written in the main input.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santiago Varela",
+  "license": "MIT"
+}
