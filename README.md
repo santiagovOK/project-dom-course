@@ -20,8 +20,6 @@ I'm also still learning best practices and practicing Git, so there may be mista
 
 [GitHub course repo](https://github.com/platzi/javascript-dom/)
 
-**(Still in progress)**
-
 
 # Spanish Version
 
@@ -48,4 +46,3 @@ También sigo aprendiendo buenas prácticas y practicando Git, por lo que puede 
 
 [GitHub course repo](https://github.com/platzi/javascript-dom/)
 
-**(Todavía en progreso)**
