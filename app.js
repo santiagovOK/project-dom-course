@@ -45,6 +45,7 @@ function deleteTask(taskItem) {
     if(confirm("Estás segura/o de borrar este elemento?") ) {
         taskItem.remove();
     };
+    updateLocalStorage();
 };
 
 function editTask(taskItem) {
@@ -52,6 +53,7 @@ function editTask(taskItem) {
     if(newTask !== null) {
         taskItem.firstChild.textContent = newTask;
     };
+    updateLocalStorage();
 };
 
 function storeTaskInLocalStorage(task) {
@@ -68,5 +70,26 @@ function loadTask() {
         taskList.appendChild(createTaskElement(task))
     });
 };
+
+function updateLocalStorage() {
+ const tasks = Array.from(taskList.querySelectorAll("li")).map((li) => li.firstChild.textContent);
+
+ localStorage.setItem("tasks", JSON.stringify(tasks));
+};
+
+const themeToggleButton = document.getElementById("toggle-theme-btn");
+
+const currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+
+themeToggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    const theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+});
+
+if(currentTheme === "dark") {
+    document.body.classList.add("dark-theme");
+}
 
 
